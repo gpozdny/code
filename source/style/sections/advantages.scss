@@ -1,0 +1,74 @@
+.advantages {
+    background-color: $bg-colour;
+}
+
+.container--advantages {
+    @include flex-align(center);
+    margin-bottom: 100px;
+}
+
+
+.advantages__title {
+    margin: 50px 0 70px 0;
+    font-size: 30px;
+}
+
+.advantages__list {
+    @include flex(row);
+    @include flex-align(center);
+    width: 90%;
+    @include tablets {
+        width: 100%; 
+    }
+}
+
+.advantages__item {
+    width: 33.3%;
+    padding: 25px 0;
+    @include flex(column);
+    @include flex-align(center);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+        &:last-child {
+            border: 0;
+        }
+        p {
+            text-align: center;
+            font-size: 12px;
+            max-width: 200px;
+            word-wrap: break-word;
+            margin:0;
+        }
+        @include tablets {
+            text-align: center;  
+        }
+}
+
+.advantages__item-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 65px 0 35px 0;
+}
+
+.advantages__item, .advantages__title {
+    color: $main-white;
+}
+
+.advantages__icon {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+.advantages__icon--security {
+    background-image: url('../img/icons/advantages/reliability.png');
+}
+
+.advantages__icon--attention {
+    background-image: url('../img/icons/advantages/attentiveness.png');
+}
+
+.advantages__icon--deadline {
+    background-image: url('../img/icons/advantages/deadline.png');
+}

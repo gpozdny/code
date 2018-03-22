@@ -1,0 +1,144 @@
+.footer {
+    padding: 85px 0;
+    overflow: hidden;
+}
+
+.footer__left, .footer__right {
+    @include flex(row);
+    width: 50%;
+    @include tablets {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    @include phones {
+        @include flex(column);
+    }
+}
+
+.footer__info,.footer__partners-images, .footer__partners, .footer__contacts, .footer__list, .footer__buttons, .footer__buttons-wrap  {
+    @include flex(column);
+}
+
+.footer{
+    background-color: #E5E9ED;
+}
+
+.footer__info-copyright, .footer__company-credentials {
+    font-size: 14px;
+    color: #1b1e27;
+}
+
+.footer__title {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.footer__partners-images {
+    @include flex-align(flex-start);
+        img {
+            &:first-child {
+                margin-bottom: 10px; 
+            }
+        }
+}
+
+.footer__company-credentials {
+    margin-top: 40px;
+}
+
+.footer__contacts {
+    @include flex-align(center);
+    span {
+        max-width: 205px;
+    }
+}
+
+.footer__contacts-wrap {
+    height: 100%;
+    @include flex(column);
+    justify-content: space-between;
+}
+
+.footer__contacts-text {
+    font-size: 16px;
+    color: black;
+}
+
+.footer__map {
+    @include flex(row);
+    border-right: 1px solid #D2D6DA;
+}
+
+.footer__list-link {
+    color: #1b1e27;
+    text-decoration: underline;
+    font-size: 14px;
+    transition: color .3s;
+        &:hover {
+            color: #355bce;
+        }
+}
+
+.footer__buttons-compose {
+    background-color: transparent;
+    color: $main-colour;
+    border: 1px solid $main-colour;
+        &:hover {
+            background-color:$main-colour;
+            color: white;
+        }
+}
+
+.footer__buttons-order {
+    margin-bottom: 18px;
+}
+
+.footer__buttons-title {
+    margin: 0 0 18px 0;
+}
+
+.footer__info, .footer__contacts {
+    width: 50%;
+    @include phones {
+        width: 100%;
+        @include flex-align(center);
+        margin-bottom: 20px;
+    }
+}
+
+.footer__map, .footer__buttons {
+    width: 50%;
+    @include phones {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.footer__map {
+    @include flex-align(center);
+}
+
+.footer__map-wrap  {
+    @include flex(row);
+    width: 60%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.footer__list-item {
+    margin-bottom: 10px;
+        &:last-child {
+            margin: 0;
+        }
+}
+
+.footer__buttons-wrap {
+    @include flex-align(center);
+}
+
+
+.container--footer {
+    @include tablets {
+        @include flex(column);
+    }
+}

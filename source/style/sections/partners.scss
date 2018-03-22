@@ -1,0 +1,38 @@
+.partners {
+    background-color: #fff;
+}
+
+.container--partners {
+    flex-wrap: wrap;
+}
+
+.partners__count {
+    @include flex(column);
+    background-color: #131822;
+    color: white;
+    padding: 30px 30px;
+}
+
+.partners__count-more {
+    font-size: 12px;
+    align-self: flex-start;
+}
+
+.partners__count-percents {
+    font-size: 34px;
+    align-self: flex-start;
+}
+
+.partners__list {
+    @include flex(row);
+    @include flex-align(center);
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.partners__item {
+    width: 293px;
+    height: 125px;
+    display: flex;
+    @include flex-align(center);
+}

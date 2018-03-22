@@ -1,0 +1,26 @@
+// vars
+
+$main-colour: #0041F1;
+$main-white: #F9FAFC;
+$text-colour: #181818;
+$border-colour: #E2E4E6;
+$bg-colour: #131822;
+$stripe-colour: rgba(24, 24, 24, 0.1);
+
+// adjustments
+
+@import 'mixins.scss';
+@import 'adjustments.scss';
+@import "plugins/hamburgers/hamburgers.scss";
+@import "plugins/slick.scss";
+
+// sections
+
+@import 'sections/header';
+@import 'sections/slider';
+@import 'sections/offers';
+@import 'sections/partners';
+@import 'sections/articles';
+@import 'sections/portfolio';
+@import 'sections/advantages';
+@import 'sections/footer';

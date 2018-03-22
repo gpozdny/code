@@ -1,0 +1,217 @@
+.offers {
+    padding-bottom: 110px; 
+}
+
+.offers__solutions {
+    @include flex(column);
+}
+
+.offers__title {
+    font-size: 30px;
+    margin: 50px 0 30px 0;
+    @include desktop {
+        text-align: center;
+    }
+}
+
+.offers__solutions-list, .offers__integration-list, .offers__misc-list {
+    @include flex(row);
+    width: 100%;
+    flex-wrap: wrap;
+    @include flex-align(center);
+}
+
+.offers__solutions-item,.offers__misc-item, .offers__integration-item {
+    // display: flex;
+    @include flex(column);
+    position: relative;
+    @include flex-align(center);
+    // background: url('../img/pics/info/promo.jpg') no-repeat center;
+    width: 293px;
+    height: 293px;
+    border-right: 1px solid $stripe-colour;
+        &:last-child {
+            border: 0;
+        }
+    // box-shadow: 0px 6px 27px 0px rgba(31, 31, 31, 0.24),0px 17px 51px 0px rgba(31, 31, 31, 0.4);
+}
+
+.offers__solutions-icon {
+    height: 30px;
+    width: 45px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.offers__solutions-title {
+    margin: 35px 0;
+    font-size: 16px;
+    color: #000;
+}
+
+.offers__solutions-desc {
+    text-align: center;
+    font-size: 12px;
+    color: rgb(82, 82, 82);
+    max-width: 175px;
+}
+
+
+.offers__integration-item--ads {
+    width: 588px;
+    background: url('../img/pics/info/ads.jpg') no-repeat center;
+}
+
+.offers__item-wrap  {
+    @include flex(column);
+    width: 100%;
+    align-self: flex-start;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+.offers__ads-title {
+    font-size: 30px;
+    margin: 0 0 15px 0 ;
+        span {
+            color: $main-colour;
+        }
+}
+
+.offers__ads-desc   {
+    font-size: 16px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.offers__link {
+    @include flex(column);
+    @include flex-align(center);
+    height: 100%;
+    width: 100%;
+}
+
+.hovered {
+    &:before {
+        content: '';
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        pointer-events: none;
+        opacity: 0;
+        box-shadow: 0px 6px 27px 0px rgba(31, 31, 31, 0.24),0px 17px 51px 0px rgba(31, 31, 31, 0.4);
+        transition: all .4s;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        pointer-events: none;
+        opacity: 0;
+        box-shadow: 0px 6px 27px 0px rgba(31, 31, 31, 0.24),0px 17px 51px 0px rgba(31, 31, 31, 0.4);
+        transition: all .3s;
+    }
+    &:hover {
+        &:before, &:after {
+            opacity: 1; 
+        }
+    }
+}
+
+.hovered--promo{
+    &:before {
+        background: url('../img/pics/info/promo.jpg') no-repeat center;
+    }
+    &:after {
+        background: url('../img/icons/info/promo.png') no-repeat center;
+    }
+}
+
+
+.hovered--corporate {
+    &:before {
+        background: url('../img/pics/info/promo.jpg') no-repeat center;
+    }
+    &:after {
+        background: url('../img/icons/info/corporate.png') no-repeat center;
+    }
+}
+
+.hovered--store {
+    &:before {
+        background: url('../img/pics/info/store.jpg') no-repeat center;
+    }
+    &:after {
+        background: url('../img/icons/info/store.png') no-repeat center;
+    }
+}
+
+.hovered--portal {
+    &:before {
+        background: url('../img/pics/info/portal.jpg') no-repeat center;
+    }
+    &:after {
+        background: url('../img/icons/info/portal.png') no-repeat center;
+    }
+}
+
+.hovered--account {
+    &:before {
+        background: url('../img/pics/info/account.jpg') no-repeat center;
+    }
+    &:after {
+        background: url('../img/icons/info/account.png') no-repeat center;
+    }
+}
+
+.hovered--bitrix {
+    &:before {
+        background: url('../img/pics/info/bitrix.jpg') no-repeat center;
+    }
+    &:after {
+        background: url('../img/icons/info/bitrix.png') no-repeat center;
+    }
+}
+
+.hovered--tech {
+    &:before {
+        background: url('../img/pics/info/tech.jpg') no-repeat center;
+    }
+    &:after {
+        background: url('../img/icons/info/tech.png') no-repeat center;
+    }
+}
+
+.hovered--design {
+    &:before {
+        background: url('../img/pics/info/design.jpg') no-repeat center;
+    }
+    &:after {
+        background: url('../img/icons/info/design.png') no-repeat center;
+    }
+}
+
+.hovered--logo {
+    &:before {
+        background: url('../img/pics/info/logo.jpg') no-repeat center;
+    }
+    &:after {
+        background: url('../img/icons/info/logo.png') no-repeat center;
+    }
+}
+
+.hovered--seo {
+    &:before {
+        background: url('../img/pics/info/seo.jpg') no-repeat center;
+    }
+    &:after {
+        background: url('../img/icons/info/seo.png') no-repeat center;
+    }
+}

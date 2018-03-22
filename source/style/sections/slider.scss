@@ -1,0 +1,187 @@
+.slider {
+    position: relative;
+}
+
+.slider__item {
+    background-image: url('../img/pics/header/window-guy.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index:2;
+    @include desktop {
+        background-size:cover;
+        background-position: 50% 100%;
+    }
+}
+
+.slider__grey {
+    height: 100%;
+    width: 50%;
+}
+
+.container--slider {
+    width: 50%;
+    margin: 0;
+    height: 540px;
+    
+}
+
+.slider__work {
+    @include flex(column);
+    align-items: flex-start;
+    position: absolute;
+    max-width: 385px;
+    left: 50%;
+    top: 20%;
+    z-index: 999;
+    color: #EDEEEE;
+        p {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 50px;
+            max-width: 385px; // IE11 fix
+            @include tablets {
+                max-width: 250px; // IE11 fix
+             }
+        }
+        h2 {
+            max-width: 385px; // IE11 fix
+            @include tablets {
+                max-width: 250px; // IE11 fix
+             }
+        }
+     @include desktop {
+        left: 5%;
+     }
+     @include tablets {
+        left: 5%;
+        max-width: 250px;
+        text-align: center;
+     }
+     @include phones {
+        left: 27%;
+     }    
+}
+
+.slider__site-name {
+    font-size: 38px;
+    margin: 0;
+    @include tablets {
+        text-align: center;
+        font-size: 30px;
+    }
+}
+
+.slider__btns {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    bottom: 25px;
+    margin-left: -50px;
+}
+
+.slider__button {
+    color: #EDEEEE;
+    border-width: 2px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 4px;
+    padding: 10px 50px;
+    text-transform: uppercase;
+    @include tablets {
+        align-self: center;
+    }
+}
+
+.slider__dots {
+    position: absolute;
+    z-index: 2;
+    bottom: 25px;
+    left: 25%;
+    @include tablets    {
+        left: 10%;
+    }
+}
+
+ul.slick-dots {
+    display: flex !important;
+}
+
+.slick-dots li button {
+    text-indent: -9999px;
+    overflow:hidden;
+    width: 8px;
+    height: 8px;
+    margin-right: 15px;
+    border: 1px solid rgba(255, 255, 255,  0.2);
+    padding: 0;
+    background-color: transparent;
+}
+
+.slider-arrow {
+    width: 50px;
+    height: 50px;
+}
+
+.slick-prev {
+    background: #EDEEEE url('../img/icons/header/arrow.png') no-repeat center;
+}
+
+.slick-next {
+    background: #EDEEEE url('../img/icons/header/arrow_right.png') no-repeat center;
+}
+
+.slick-dots .slick-active button {
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+
+.blured-background {
+    width:50%;
+    height:100%;
+    display:block;
+    background-image: url('../img/pics/header/window-guy.jpg');
+    z-index:1;
+    position:absolute;
+    top:0;
+    left:0;
+    padding-left:20%;
+    padding-top:20%;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    @include desktop {
+        background-position: 26% 100%;
+        background-size: cover;
+    }
+    @include phones {
+        width: 100%;
+        background-position: 55% 100%; 
+    }
+}
+.mask {
+    &:before {
+        content: '';
+        height: 100%;
+        width: 50%;
+        position: absolute;
+        background-color: rgba(27, 30, 39, 0.6);
+        z-index: 2;
+        @include phones {
+            width: 100%; 
+        }
+    }
+}
+
+.slider__progress-bar {
+    position: absolute;
+    width: 100%;
+    bottom: -3px;
+    left: 0;
+    background-color: #BBBEC2;
+}
+
+.slider__progress-percents {
+    height: 3px;
+    width: 30%;
+    background-color:$main-colour;
+}

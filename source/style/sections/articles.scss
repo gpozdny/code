@@ -1,0 +1,112 @@
+.articles {
+    background-color: #E5E9ED;
+}
+
+.articles__left, .articles__right {
+    width: 50%;
+    @include flex(column);
+    margin-bottom: 48px;
+    @include flex-align(flex-start);
+    @include laptop {
+        width: 100%;
+        @include flex-align(center); 
+    }
+}
+
+.articles__title {
+    font-size: 30px;
+    margin: 50px 0;
+}
+
+.articles__item {
+    @include flex(column);
+    border-top: 2px solid #D9DDE0;
+        p {
+            color: rgba(37, 37, 37, 0.8);
+            font-size: 14px;
+            max-width: 520px;
+        }
+}
+
+.articles__article-title {
+    font-size: 16px;
+    color: rgb(37, 37, 37);
+    margin: 30px 0;
+}
+
+.articles__date {
+    font-size: 14px;
+    color: rgba(37, 37, 37, 0.6);
+}
+
+.articles__buttons {
+    margin-bottom: 30px;
+}
+
+.articles__link {
+    font-size: 16px;
+    position: relative;
+    color: rgba(0, 67, 237, 0.8);
+        &::before{
+            content: '';
+            position: absolute;
+            background: url('../img/icons/articles/arrow.png') no-repeat center;
+            width: 31px;
+            height: 13px;
+            right: -60px;
+            bottom: 4px;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            width: 40px;
+            background-color: transparent;
+            height: 20px;
+        }
+}
+
+.articles__offers-item {
+    height: 205px;
+    margin-bottom: 10px;
+}
+
+.offers__item-wrap--articles {
+    padding: 20px 40px;
+}
+
+.container--articles {
+    @include laptop {
+        flex-direction: column;
+        @include flex-align(center);
+    }
+}
+
+.articles__offers--ads {
+    background: url('../img/pics/info/ads.jpg') no-repeat center;
+}
+
+.articles__controls {
+    position: absolute;
+}
+
+.articles__controls-left {
+    background: #EDEEEE url('../img/icons/header/arrow.png') no-repeat center;
+}
+
+.articles__controls-right {
+    background: #EDEEEE url('../img/icons/header/arrow_right.png') no-repeat center;
+}
+
+.articles__offers-item {
+    &:hover {
+        .articles__offers-link {
+            opacity: 1;
+        }
+    }
+}
+
+.articles__offers-link {
+    display: flex;
+    opacity: 0;
+    transition: opacity ease-in-out .3s;
+}
